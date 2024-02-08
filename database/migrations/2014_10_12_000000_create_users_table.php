@@ -26,9 +26,6 @@ return new class extends Migration
             $table->text('adress')->nullable();
             $table->enum('role', ['admin', 'agent', 'user'])->default('user'); // admin, agent, user
             $table->enum('status', ['active', 'inactive'])->default('active'); // admin, agent, user
-
-            $table->string('username')->nullable();
-
             $table->rememberToken();
             $table->timestamps();
         });
