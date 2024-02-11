@@ -45,7 +45,7 @@
 
 
         <!-- partial:partials/_sidebar.html -->
-        @include('amdin.body.sidebar')
+        @include('admin.body.sidebar')
 
         <!-- partial -->
 
