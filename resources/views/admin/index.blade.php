@@ -3,7 +3,7 @@
     <div class="page-content">
         <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
             <div>
-                <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
+                <h4 class="mb-3 mb-md-0">Welcome to the Admin Dashboard</h4>
             </div>
             <div class="d-flex align-items-center flex-wrap text-nowrap">
                 <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
@@ -232,7 +232,7 @@
         <!-- row -->
 
         <div class="row">
-            <div class="col-lg-7 col-xl-8 grid-margin stretch-card">
+            <div class="col-lg-12 col-xl-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-baseline mb-2">
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
+            {{-- <div class="col-lg-5 col-xl-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-baseline">
@@ -323,7 +323,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- row -->
 
