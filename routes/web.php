@@ -36,8 +36,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
-}); // group admin middleware checks if role:admin
+}); // end group admin middleware checks if role:admin
 
 Route::middleware(['auth', 'role:agent'])->group(function () {
     Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-});
+}); // end group agent middleware checks if role:agent
+
+route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
