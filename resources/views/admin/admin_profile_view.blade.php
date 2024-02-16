@@ -4,14 +4,13 @@
 
         <div class="row profile-body">
             <!-- left wrapper start -->
-            <div class="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
+            <div class="d-none d-md-block col-md-4 col-xl-4 left-wrapper">
                 <div class="card rounded">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-2">
-                            <h6 class="card-title mb-0">About</h6>
                             <div>
-                                <img class="wd-70 rounded-circle" src="https://via.placeholder.com/100x100" alt="profile" />
-                                <span class="h4 ms-3 text-dark">Amiah Burton</span>
+                                <img class="wd100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url ('upload/admin_images/' .$profileData->photo) : url('upload/') }}" alt="profile" />
+                                <span class="h4 ms-3 text-white">Amiah Burton</span>
                             </div>
 
                         </div>
@@ -51,7 +50,7 @@
             </div>
             <!-- left wrapper end -->
             <!-- middle wrapper start -->
-            <div class="col-md-8 col-xl-6 middle-wrapper">
+            <div class="col-md-8 col-xl-8 middle-wrapper">
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
