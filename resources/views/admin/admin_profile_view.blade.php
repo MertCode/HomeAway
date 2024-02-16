@@ -9,30 +9,31 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <div>
-                                <img class="wd100 rounded-circle" src="{{ (!empty($profileData->photo)) ? url ('upload/admin_images/' .$profileData->photo) : url('upload/') }}" alt="profile" />
-                                <span class="h4 ms-3 text-white">Amiah Burton</span>
+                                <img class="wd-100 rounded-circle"
+                                    src="{{ !empty($profileData->photo) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
+                                    alt="user">
+
+
+                                <span class="h4 ms-3 text-white">{{ $profileData->username }}</span>
                             </div>
 
                         </div>
-                        <p>
-                            Hi! I'm Amiah the Senior UI Designer at NobleUI. We hope you
-                            enjoy the design and quality of Social.
-                        </p>
+
                         <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Joined:</label>
-                            <p class="text-muted">November 15, 2015</p>
-                        </div>
-                        <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Lives:</label>
-                            <p class="text-muted">New York, USA</p>
+                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Name:</label>
+                            <p class="text-muted">{{ $profileData->name }}</p>
                         </div>
                         <div class="mt-3">
                             <label class="tx-11 fw-bolder mb-0 text-uppercase">Email:</label>
-                            <p class="text-muted">me@nobleui.com</p>
+                            <p class="text-muted">{{ $profileData->email }}</p>
                         </div>
                         <div class="mt-3">
-                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Website:</label>
-                            <p class="text-muted">www.nobleui.com</p>
+                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Phone:</label>
+                            <p class="text-muted">{{ $profileData->phone }}</p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="tx-11 fw-bolder mb-0 text-uppercase">Adress:</label>
+                            <p class="text-muted">{{ $profileData->adress }}</p>
                         </div>
                         <div class="mt-3 d-flex social-links">
                             <a href="javascript:;" class="btn btn-icon border btn-xs me-2">
