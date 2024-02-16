@@ -54,7 +54,7 @@
             @include('admin.body.header')
             <!-- partial -->
 
-            @yield('admin');
+            @yield('admin')
 
             <!-- partial:partials/_footer.html -->
             @include('admin.body.footer')
