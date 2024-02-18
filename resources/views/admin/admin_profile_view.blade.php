@@ -73,7 +73,11 @@
                         <div class="card-body">
                             <h6 class="card-title">Edit Profile</h6>
 
-                            <form class="forms-sample">
+                            <form method="POST" action="{{ 'admin.profile.store' }}" class="forms-sample"
+                                enctype="multipart/form-data">
+
+
+
                                 <div class="mb-3">
                                     <label for="exampleInputUsername1" class="form-label">Username</label>
                                     <input type="text" name="username" class="form-control" id="exampleInputUsername1"
