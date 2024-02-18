@@ -26,7 +26,7 @@
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <div>
                                 <img id="exampleInputEmail1" class="wd-100 rounded-circle"
-                                    src="{{ !empty($profileData->photo) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
+                                    src="{{ !empty($profileData->photo) ? url('upload/admin/images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
                                     alt="profile picture">
 
 
@@ -122,7 +122,7 @@
                                     <label for="exampleInputEmail1" class="form-label"> </label>
 
                                     <img id="showImage" class="wd-80 rounded-circle"
-                                        src="{{ !empty($profileData->photo) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
+                                        src="{{ !empty($profileData->photo) ? url('upload/admin/images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
                                         alt="profile picture">
 
                                 </div>
