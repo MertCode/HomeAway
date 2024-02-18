@@ -1,5 +1,21 @@
 @extends('admin.admin_dashboard')
 @section('admin')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #showImage {
+            width: 100px;
+            /* Set a fixed width */
+            height: 100px;
+            /* Set a fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio and crop if necessary */
+            object-position: center;
+            /* Center the image within its container */
+            border-radius: 50%;
+            /* Ensure the image is circular */
+        }
+    </style>
+
     <div class="page-content">
 
         <div class="row profile-body">
@@ -9,9 +25,9 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <div>
-                                <img class="wd-100 rounded-circle"
+                                <img id="exampleInputEmail1" class="wd-100 rounded-circle"
                                     src="{{ !empty($profileData->photo) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
-                                    alt="user">
+                                    alt="profile picture">
 
 
                                 <span class="h4 ms-3 text-white">{{ $profileData->username }}</span>
@@ -90,19 +106,23 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label" for="formFile">Upload New Profile
-                                        Picture</label>
-                                    <input name="photo" class="form-control" type="file" id="formFile">
+                                    <label for="exampleInputEmail1" class="form-label">Photo</label>
 
+                                    <input class="form-control" name="photo" type="file" id="image">
 
                                 </div>
 
-                                <div class="form-check mb-3">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                    <label class="form-check-label" for="exampleCheck1">
-                                        Remember me
-                                    </label>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"> </label>
+
+                                    <img id="showImage" class="wd-80 rounded-circle"
+                                        src="{{ !empty($profileData->photo) ? url('upload/admin_images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
+                                        alt="profile picture">
+
                                 </div>
+
+
                                 <button type="submit" class="btn btn-primary me-2">
                                     Submit
                                 </button>
@@ -118,4 +138,22 @@
             <!-- right wrapper end -->
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                if (e.target.files && e.target.files[0]) { // Check if a file was selected
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#showImage').attr('src', e.target.result); // Corrected the id to showImage
+                    }
+
+                    reader.readAsDataURL(e.target.files[0]);
+                } else {
+                    console.log('No file was selected'); // For debugging
+                }
+            });
+        });
+    </script>
 @endsection
