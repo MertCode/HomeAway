@@ -75,6 +75,7 @@
 
                             <form method="POST" action="{{ 'admin.profile.store' }}" class="forms-sample"
                                 enctype="multipart/form-data">
+                                @csrf
 
 
 
