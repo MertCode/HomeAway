@@ -55,6 +55,8 @@ class AdminController extends Controller
             $data['photo'] = $filename;
         } // end if statement
 
-        $data->save()->back()->with('success', 'Profile Updated Successfully');
+        $data->save();
+
+        return redirect()->back();
     } // end method
 }
