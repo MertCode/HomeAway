@@ -142,9 +142,9 @@
 
 
                                 <button type="submit" class="btn btn-primary me-2">
-                                    Submit
+                                    Update
                                 </button>
-                                <button class="btn btn-secondary">Cancel</button>
+
                             </form>
                         </div>
                     </div>
