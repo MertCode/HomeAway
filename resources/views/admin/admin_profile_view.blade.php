@@ -14,6 +14,19 @@
             border-radius: 50%;
             /* Ensure the image is circular */
         }
+
+        #profilePicture {
+            width: 100px;
+            /* Set a fixed width */
+            height: 100px;
+            /* Set a fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio and crop if necessary */
+            object-position: center;
+            /* Center the image within its container */
+            border-radius: 50%;
+            /* Ensure the image is circular */
+        }
     </style>
 
     <div class="page-content">
@@ -25,7 +38,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <div>
-                                <img id="exampleInputEmail1" class="wd-100 rounded-circle"
+                                <img id="profilePicture" class="wd-100 rounded-circle"
                                     src="{{ !empty($profileData->photo) ? url('upload/admin/images/' . $profileData->photo) : url('upload/no_image.jpg') }}"
                                     alt="profile picture">
 
